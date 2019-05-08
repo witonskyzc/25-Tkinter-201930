@@ -15,12 +15,10 @@ Authors: David Mutchler and his colleagues
 import tkinter
 from tkinter import ttk
 
-
 class Temperature(object):
     def __init__(self):
         self.entry_for_temperature = None
         self.label_for_temperature = None
-
 
 def main():
     # Data object to hold information needed for callbacks.

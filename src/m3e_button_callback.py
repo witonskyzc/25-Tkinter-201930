@@ -8,18 +8,17 @@ Example showing for tkinter and ttk:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Zach Witonsky.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
 from tkinter import ttk
 import random
 
-
 def main():
     root = tkinter.Tk()
 
-    frame1 = ttk.Frame(root, padding=10)
+    frame1 = ttk.Frame(root, padding=100)
     frame1.grid()
 
     print_stuff_button = ttk.Button(frame1, text='Print stuff')
@@ -28,7 +27,6 @@ def main():
     print_stuff_button.grid()
 
     root.mainloop()
-
 
 def do_stuff():
     """
@@ -111,7 +109,6 @@ def do_stuff():
 #      for the body of the lambda expression.
 #
 ###############################################################################
-
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

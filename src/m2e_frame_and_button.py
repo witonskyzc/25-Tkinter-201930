@@ -6,17 +6,16 @@ Example showing for tkinter and ttk:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Zach Witonsky.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
 from tkinter import ttk
 
-
 def main():
     root = tkinter.Tk()
 
-    frame1 = ttk.Frame(root, padding=10)
+    frame1 = ttk.Frame(root, padding=100)
     frame1.grid()
 
     go_forward_button = ttk.Button(frame1, text='Forward')

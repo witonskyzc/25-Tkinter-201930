@@ -19,17 +19,16 @@ is sometimes more convenient but never necessary.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Zach Witonsky.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
 from tkinter import ttk
 
-
 def main():
     root = tkinter.Tk()
 
-    frame1 = ttk.Frame(root, padding=10)
+    frame1 = ttk.Frame(root, padding=100)
     frame1.grid()
 
     my_entry_box = ttk.Entry(frame1)
@@ -41,7 +40,6 @@ def main():
     print_entry_button.grid()
 
     root.mainloop()
-
 
 def print_contents(entry_box):
     """
@@ -129,7 +127,6 @@ def print_contents(entry_box):
 #       number that the string represents.
 #
 ###############################################################################
-
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

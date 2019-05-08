@@ -1,10 +1,9 @@
 """
 This project lets you try out Tkinter/Ttk and practice it!
-
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Zach Witonsky.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
 from tkinter import ttk
@@ -13,28 +12,39 @@ from tkinter import ttk
 def main():
     """ Constructs a GUI with stuff on it. """
     # -------------------------------------------------------------------------
-    # TODO: 2. After reading and understanding the m1e module,
+    # DONE: 2. After reading and understanding the m1e module,
     #   ** make a window that shows up. **
     # -------------------------------------------------------------------------
 
+    root = tkinter.Tk()
+
     # -------------------------------------------------------------------------
-    # TODO: 3. After reading and understanding the m2e module,
+    # DONE: 3. After reading and understanding the m2e module,
     #   ** put a Frame on the window. **
     # -------------------------------------------------------------------------
 
+    frame1 = ttk.Frame(root, padding=100)
+    frame1.grid()
+
     # -------------------------------------------------------------------------
-    # TODO: 4. After reading and understanding the m2e module,
+    # DONE: 4. After reading and understanding the m2e module,
     #   ** put a Button on the Frame. **
     # -------------------------------------------------------------------------
 
+    print_stuff_button = ttk.Button(frame1, text='Hello Button')
+
     # -------------------------------------------------------------------------
-    # TODO: 5. After reading and understanding the m3e module,
+    # DONE: 5. After reading and understanding the m3e module,
     #   ** make your Button respond to a button-press **
     #   ** by printing   "Hello"  on the Console.     **
     # -------------------------------------------------------------------------
 
+    print_stuff_button['command'] = (lambda:
+                                     do_stuff())
+    print_stuff_button.grid()
+
     # -------------------------------------------------------------------------
-    # TODO: 6. After reading and understanding the m4e module,
+    # DONE: 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
     #   -- Put a second Button on the Frame.
     #   -- Make this new Button, when pressed, print "Hello"
@@ -42,8 +52,16 @@ def main():
     #        is the string 'ok', but print "Goodbye" otherwise.
     # -------------------------------------------------------------------------
 
+    my_entry_box = ttk.Entry(frame1)
+    my_entry_box.grid()
+
+    print_stuff_button = ttk.Button(frame1, text='Enter word')
+    print_stuff_button['command'] = (lambda:
+                                     do_stuff1(my_entry_box))
+    print_stuff_button.grid()
+
     # -------------------------------------------------------------------------
-    # TODO: 7.
+    # DONE: 7.
     #    -- Put a second Entry on the Frame.
     #    -- Put a third Button on the frame.
     #    -- Make this new Button respond to a button-press as follows:
@@ -66,10 +84,37 @@ def main():
     #      n = int(s)
     ####################################################################
 
+    my_entry_box2 = ttk.Entry(frame1)
+    my_entry_box2.grid()
+
+    print_stuff_button = ttk.Button(frame1, text='Enter number: ')
+    print_stuff_button['command'] = (lambda:
+                                       do_stuff2(my_entry_box2,my_entry_box))
+    print_stuff_button.grid()
+
     # -------------------------------------------------------------------------
-    # TODO: 8. As time permits, do other interesting GUI things!
+    # DONE: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
 
+    root.mainloop()
+
+def do_stuff():
+    print('Hello')
+
+def do_stuff1(my_entry_box):
+    s = my_entry_box.get()
+
+    if s == 'ok':
+        print('Hello')
+    else:
+        print('Goodbye')
+
+def do_stuff2(my_entry_box2, my_entry_box):
+    s = my_entry_box2.get()
+    n = int(s)
+
+    for k in range(n):
+        print(my_entry_box.get())
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
